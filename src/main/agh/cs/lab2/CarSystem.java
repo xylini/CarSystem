@@ -8,8 +8,5 @@ public class CarSystem {
             car.move(moves[i]);
         }
         System.out.println(car.toString());
-
-
-
     }
 }
