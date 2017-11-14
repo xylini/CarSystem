@@ -26,7 +26,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return this.position.toString() + " " + this.direction.toString();
+        return this.direction.toString();
     }
 
     //public boolean canMoveTo(Position newPos) {

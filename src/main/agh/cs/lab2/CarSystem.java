@@ -2,11 +2,13 @@ package agh.cs.lab2;
 
 public class CarSystem {
     public static void main(String args[]){
-        Car car = new Car();
-        MoveDirection[] moves = new OptionsParser().parse(args);
-        for(int i = 0; i < args.length; i++){
-            car.move(moves[i]);
-        }
-        System.out.println(car.toString());
+        MoveDirection[] directions = new OptionsParser().parse(args);
+        IWorldMap map = new RectangularMap(10, 5);
+        map.place(new Car(map));
+        map.place(new Car(map,3,4));
+        map.run(directions);
+        System.out.println(map.toString());
+
+        //System.out.println(car.toString());
     }
 }
